@@ -1,0 +1,27 @@
+{
+  "name": "backend_avanti",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido com as aulas do bootcamp fullstack Avanti",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --env-file=.env index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingxrd/BackEnd_Avanti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingxrd/BackEnd_Avanti/issues"
+  },
+  "homepage": "https://github.com/ingxrd/BackEnd_Avanti#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.0",
+    "@prisma/client": "^7.4.0",
+    "express": "^5.2.1",
+    "prisma": "^7.4.0"
+  }
+}

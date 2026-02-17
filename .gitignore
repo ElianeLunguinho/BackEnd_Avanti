@@ -1,0 +1,17 @@
+#Node
+node_modules
+
+
+#Variáveis de Ambiente
+.env
+.env.*
+
+
+#Prisma
+prisma/generated/
+generated/prisma/
+
+
+#Arquivos do mac 
+.DS_Store
+

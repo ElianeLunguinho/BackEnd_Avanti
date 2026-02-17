@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+// Modelagem das entidades + relações
+
+model User{
+  id String @id @default(uuid())
+  nome String @db.VarChar(100)
+  email String @unique 
+  phone String 
+  descricao String 
+  conhecimentos Conhecimento[]
+
+
+  @@map("user") 
+}
+
+enum NivelConhecimento {
+  BASICO
+  INTERMEDIARIO
+  AVANCADO
+}
+
+model Conhecimento{
+  id String @id @default(uuid())
+  tituloConhecimento String @db.VarChar(300)
+  descricao String
+  nivel     NivelConhecimento
+  user User @relation(fields: [userId], references: [id])
+  userId String  // FK 
+  @@map("conhecimentos") 
+}
+
