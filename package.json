@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --env-file=.env index.js"
+    "start": "nodemon --env-file=.env src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,18 @@
   },
   "homepage": "https://github.com/ingxrd/BackEnd_Avanti#readme",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.8",
+    "@mui/material": "^7.3.8",
     "@prisma/adapter-pg": "^7.4.0",
     "@prisma/client": "^7.4.0",
+    "axios": "^1.13.6",
     "express": "^5.2.1",
-    "prisma": "^7.4.0"
+    "prisma": "^7.4.0",
+    "react-router-dom": "^7.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
